@@ -41,7 +41,7 @@ public class EmailSenderTest {
     @Test
     void sendEmailWithFileWithStrim(){
         System.out.println("Sending email");
-        File file = new File("C:\\Users\\INDIA\\Desktop\\Email-Sender-App\\Email sender App\\Email-sender-App\\src\\main\\resources\\static\\images\\farheen photo.png");
+        File file = new File("C:\\Users\\INDIA\\Desktop\\Documenta farheen\\Farheen-cell.github.io\\images\\netlify.png");
         try {
             InputStream is = new FileInputStream(file);
             emailService.sendEmailWithFile("istakarhussain1992@gmail.com",

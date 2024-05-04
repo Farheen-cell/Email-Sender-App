@@ -103,13 +103,13 @@ public class EmailServiceImpl implements EmailService {
         MimeMessage simpleMailMessage = mailSender.createMimeMessage();
 
         try {
-            MimeMessageHelper helper = new MimeMessageHelper(simpleMailMessage,true,"UTF-8");
+            MimeMessageHelper helper = new MimeMessageHelper(simpleMailMessage,true);
             helper.setTo(to);
             helper.setFrom("farheen.ali108@gmail.com");
             helper.setSubject(subject);
             helper.setText(message,true);
 
-            File file = new File("src/main/resources/email/test.png");
+            File file = new File("C:\\Users\\INDIA\\Desktop\\Email-Sender-App\\Email sender App\\Email-sender-App\\src\\main\\resources\\email\\test.png");
             Files.copy(is, file.toPath(), StandardCopyOption.REPLACE_EXISTING);
 
             FileSystemResource fileSystemResource = new FileSystemResource(file);
